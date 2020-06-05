@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ####################################################
 #key details  :
 import sys
-rel_loc = '/../../'
+rel_loc = '/../'
 path=os.path.abspath(''.join([os.path.dirname(__file__),rel_loc] ))
 sys.path.append(path)
 from secret_files import server_keys
@@ -33,9 +33,9 @@ SECRET_KEY = server_keys.get_key_mindMap()
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=["*"]
 
 
 # Application definition
@@ -129,3 +129,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'

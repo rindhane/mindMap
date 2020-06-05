@@ -1,3 +1,7 @@
 
 #python build files
 __pycache__/
+
+#contains secrets and keys 
+secret_files/
+
